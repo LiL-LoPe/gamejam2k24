@@ -8,8 +8,9 @@
 }
 
 .imageContainer {
-    position: relative;
+    position: absolute;
     max-width: 100%; /* Adatta la larghezza massima della box alle tue esigenze */
+    max-height: 100%;
     margin: 0 auto; /* Centra la box */
 }
 
@@ -20,11 +21,12 @@
 
 .nextButton {
     position: absolute;
-    bottom: 75px; /* Posiziona il bottone in basso */
+    bottom: -245px; /* Posiziona il bottone in basso */
     left: 50%;
     transform: translateX(-50%);
     padding: 20px 100px;
     background-color: #007bff;
+    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -36,4 +38,18 @@
     .nextButton {
         padding: 15px 30px;
     }
+}
+
+.rulesButton{
+    position: absolute;
+    top: 10px; /* Distanza dal bordo superiore */
+    right: 440px; /* Distanza dal bordo destro */
+    z-index: 100; /* Assicura che il pulsante sia sopra gli altri elementi */
+    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+    background-color: #007bff; /* Colore di sfondo */
+    color: white; /* Colore del testo */
+    border: none; /* Nessun bordo */
+    padding: 30px 5px; /* Imbottitura intorno al testo */
+    border-radius: 5px; /* Angoli arrotondati */
+    opacity: 0;
 }

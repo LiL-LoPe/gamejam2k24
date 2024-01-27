@@ -1,0 +1,50 @@
+.settingButton {
+    position: absolute;
+    top: 20px; /* Distanza dal bordo superiore */
+    right: 560px; /* Distanza dal bordo destro */
+    z-index: 2; /* Assicura che il pulsante sia sopra gli altri elementi */
+    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+    background-color: #007bff; /* Colore di sfondo */
+    color: white; /* Colore del testo */
+    border: none; /* Nessun bordo */
+    padding: 20px 10px; /* Imbottitura intorno al testo */
+    border-radius: 5px; /* Angoli arrotondati */
+    opacity: 0;
+}
+
+.settingsPanel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.settingsPanel label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.settingsPanel input[type="range"] {
+    width: 100%;
+}
+
+.settingsPanel button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.settingsPanel button:hover {
+    background-color: #0056b3;
+}
