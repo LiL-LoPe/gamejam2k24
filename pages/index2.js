@@ -1,23 +1,15 @@
 import { useAppContext } from '@/contexts/AppContext';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Howl } from 'howler';
+import { Howl, Howler } from 'howler';
 
-const backgroundPlayerImages = [
+const backgroundImages = [
   'url("/selectplayericons/IG_Player-1-BG.svg")',
   'url("/selectplayericons/IG_Player-2-BG.svg")',
   'url("/selectplayericons/IG_Player-3-BG.svg")',
   'url("/selectplayericons/IG_Player-4-BG.svg")',
   'url("/selectplayericons/IG_Player-5-BG.svg")',
   'url("/selectplayericons/IG_Player-6-BG.svg")',
-];
-
-const backgroundPenImages = [
-  'url("/selectplayericons/IG_Player-1-Pen.svg")',
-  'url("/selectplayericons/IG_Player-2-Pen.svg")',
-  'url("/selectplayericons/IG_Player-3-Pen.svg")',
-  'url("/selectplayericons/IG_Player-4-Pen.svg")',
-  'url("/selectplayericons/IG_Player-5-Pen.svg")',
-  'url("/selectplayericons/IG_Player-6-Pen.svg")',
 ];
 
 export default function Home() {
@@ -45,7 +37,7 @@ export default function Home() {
       src: ['/giocacazzo.aac'],
       autoplay: true,
       loop: true,
-      volume: 1.0,
+      volume: 2.0, 
     });
 
     return () => {
@@ -55,43 +47,27 @@ export default function Home() {
 
   return (
     <main className="text-5xl flex flex-col items-center justify-center w-screen h-screen">
-      <div className='boxStyle'>
-        <div className='iscrizionegiocatori'>
+      <div className='flex flex-col h-screen items-center w-10/12'>
+      <div className='iscrizionegiocatori'>
           <div className='iscrizionegiocatoriscritta'>
             {/* Contenuto del div 'iscrizionegiocatoriscritta' */}
           </div>
         </div>
         {players.map((str, index) => (
-          //gestisce lo sfondo del text
           <div
             key={index}
             style={{
-              background: backgroundPlayerImages[index],
+              background: index < 2 ? backgroundImages[index] : backgroundImages[index % backgroundImages.length],
               padding: '10px',
               borderRadius: '0px',
               marginBottom: '0px',
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'left',
-              position: 'relative',
+              alignItems: 'center',
             }}
           >
-            {/* codice per la penna  */}
-            <div style={{
-                background: backgroundPenImages[index],
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                height: '100%',
-                width: '30px',
-                position: 'absolute',
-                left: 0,
-                top: 0,
-              }}>
-          </div>
-            <label
-            />
             <label style={{ width: '100%', marginBottom: '5px' }}>
-              {/* definisce inputbox */}
+              Player {index + 1}:
               <input
                 type="text"
                 value={str}
@@ -101,84 +77,39 @@ export default function Home() {
                   background: 'transparent',
                   border: 'transparent',
                   borderBottom: '1px solid #ccc',
-                  borderRadius: '0',
+                  borderRadius: '0', // Senza bordo arrotondato
                   padding: '5px',
                   marginTop: '5px',
-                  paddingLeft: '40px', // Aggiunto padding per far spazio all'immagine della penna
                 }}
               />
             </label>
           </div>
         ))}
-        {validationError && <p style={{ fontSize: '0.65em' }} className={`text-red-500 ${validationError ? 'error-message' : ''}`}>Almeno tre giocatori devono essere inseriti.</p>}
+        {validationError &&  <p style={{ fontSize: '0.65em' }} className={`text-red-500 ${validationError ? 'error-message' : ''}`}>Almeno tre giocatori devono essere inseriti.</p>}
         <button onClick={addPlayer}>+</button>
         <button onClick={removePlayer}>-</button>
-        <button className='play-button' onClick={playButtonHandler}>
-          <div className='play-button-text'>
-            {/* Contenuto del div 'iscrizionegiocatoriscritta' */}
-          </div>
-        </button>
+        <button onClick={playButtonHandler}>Gioca</button>
       </div>
       <style jsx>{`
         .iscrizionegiocatori {
           background-image: url('selectplayericons/IG-Title-BG.svg');
-          background-repeat: no-repeat;
+          background-repeat: no-repeat
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 13vh;
-          width: 33vw;
+          height: 33%; /* Imposta l'altezza al 33% dell'altezza del box padre */
+          width: 100%; /* Occupa tutta la larghezza del box padre */
         }
 
         .iscrizionegiocatoriscritta {
           background-image: url('selectplayericons/IG-Title-Text.svg');
-          background-repeat: no-repeat;
+          background-repeat: no-repeat
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 10vh;
-          width: 30vw;
+          height: 30%; /* Imposta l'altezza al 30% dell'altezza del box padre */
+          width: 100%; /* Occupa tutta la larghezza del box padre */
         }
-
-        .play-button {
-          background-image: url('selectplayericons/IG-Continua-Sfondo.svg');
-          background-size: cover;
-          background-repeat: no-repeat;
-          height: 13vh;
-          width: 33vw;
-          border: none;
-          cursor: pointer;
-          margin-top: 10px;
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-          font-size: 18px;
-        }
-
-        .play-button-text {
-          z-index: 1;
-          background-image: url('selectplayericons/IG-Continua-Text.svg');
-          background-size: cover;
-          background-repeat: no-repeat;
-          height: 4vh;
-          width: 11vw;
-          border: none;
-          cursor: pointer;
-          margin-top: 10px;
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .boxStyle  {
-          background-image: url('selectplayericons/IG-BG.svg');
-          
-        };
       `}</style>
     </main>
   );
