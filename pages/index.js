@@ -43,13 +43,8 @@ export default function Home() {
       setValidationError(true);
     } else {
       setValidationError(false);
-<<<<<<< HEAD
       // Naviga alla pagina successiva programmatticamente
-      window.location.href = '/IntroPage';
-=======
-
-      window.location.href = '/introPage';
->>>>>>> 72f53685660198b325fd6044e399f1210b0250a4
+      window.location.href = './IntroPage';
     }
   };
 

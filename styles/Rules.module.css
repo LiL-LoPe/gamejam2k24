@@ -48,16 +48,6 @@
     width: 70px;
     z-index: 100; /* Assicura che il pulsante sia sopra gli altri elementi */
     cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
-<<<<<<< HEAD
-    background-color: #007bff; /* Colore di sfondo */
-    color: white; /* Colore del testo */
-    border: none; /* Nessun bordo */
-    border-radius: 5px; /* Angoli arrotondati */
-    opacity: 1;
-    width: 75px;  /* Larghezza fissa */
-    height: 70px;  /* Altezza fissa */
-}
-=======
 }
 
 .buttonContainer {
@@ -67,4 +57,3 @@
     display: flex;
     gap: 10px; /* Spazio tra i pulsanti */
   }
->>>>>>> 72f53685660198b325fd6044e399f1210b0250a4
