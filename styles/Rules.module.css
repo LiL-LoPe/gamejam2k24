@@ -43,7 +43,7 @@
 .rulesButton{
     position: absolute;
     top: 10px; /* Distanza dal bordo superiore */
-    right: 440px; /* Distanza dal bordo destro */
+    right: 470px; /* Distanza dal bordo destro */
     z-index: 100; /* Assicura che il pulsante sia sopra gli altri elementi */
     cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
     background-color: #007bff; /* Colore di sfondo */
@@ -51,5 +51,7 @@
     border: none; /* Nessun bordo */
     padding: 30px 5px; /* Imbottitura intorno al testo */
     border-radius: 5px; /* Angoli arrotondati */
-    opacity: 0;
+    opacity: 1;
+    width: 75px;  /* Larghezza fissa */
+    height: 70px;  /* Altezza fissa */
 }
