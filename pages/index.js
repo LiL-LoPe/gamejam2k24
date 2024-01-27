@@ -54,7 +54,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="text-5xl flex flex-col items-center justify-center w-screen h-screen">
+    <main className="text-5xl flex items-center justify-center w-screen h-screen">
       <div className='boxStyle'>
         <div className='iscrizionegiocatori'>
           <div className='iscrizionegiocatoriscritta'>
@@ -63,31 +63,12 @@ export default function Home() {
         </div>
         {players.map((str, index) => (
           //gestisce lo sfondo del text
-          <div
-            key={index}
-            style={{
-              background: backgroundPlayerImages[index],
-              padding: '10px',
-              borderRadius: '0px',
-              marginBottom: '0px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'left',
-              position: 'relative',
-            }}
-          >
+          <div key={index} className="playerBox" style={{ background: backgroundPlayerImages[index]}}>
             {/* codice per la penna  */}
-            <div style={{
+            <div className = 'penImage'style={{
                 background: backgroundPenImages[index],
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                height: '100%',
-                width: '30px',
-                position: 'absolute',
-                left: 0,
-                top: 0,
               }}>
-          </div>
+            </div>
             <label
             />
             <label style={{ width: '100%', marginBottom: '5px' }}>
@@ -104,7 +85,7 @@ export default function Home() {
                   borderRadius: '0',
                   padding: '5px',
                   marginTop: '5px',
-                  paddingLeft: '40px', // Aggiunto padding per far spazio all'immagine della penna
+                  paddingLeft: '50px', // Aggiunto padding per far spazio all'immagine della penna
                 }}
               />
             </label>
@@ -177,8 +158,32 @@ export default function Home() {
 
         .boxStyle  {
           background-image: url('selectplayericons/IG-BG.svg');
-          
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
         };
+
+        .playerBox {
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          width: 80vw; /* Puoi regolare la larghezza in base alle tue esigenze */
+          margin-bottom: 15vh; /* Aggiunto uno spazio tra le box dei giocatori */
+          background-position: left top;
+        }
+
+        .penImage {
+          width: 5vw;
+          height: 10vh;
+          position: absolute;
+        }
       `}</style>
     </main>
   );
