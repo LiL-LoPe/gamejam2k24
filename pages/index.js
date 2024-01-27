@@ -5,6 +5,7 @@ import rulesStyles from '../styles/Rules.module.css';
 import settingButtonStyles from '../styles/SettingButton.module.css';
 import SettingButton from './SettingButton';
 import RulesButton from './RulesButton';
+import styles from '../styles/Rules.module.css';
 
 
 const backgroundPlayerImages = [
@@ -42,7 +43,7 @@ export default function Home() {
       setValidationError(true);
     } else {
       setValidationError(false);
-      // Naviga alla pagina successiva programmatticamente
+
       window.location.href = '/intro';
     }
   };
@@ -62,15 +63,16 @@ export default function Home() {
 
   return (
     <main className="text-5xl flex items-center justify-center w-screen h-screen">
-      <SettingButton />   {/* aggiunti bottoni impostazioni e regolamento */}
-            <RulesButton   />
-            <div className={rulesStyles.rulesButton}></div>
-            <div className={settingButtonStyles.SettingButton}></div>
+      
       <div className='boxStyle'>
+      <div className='flex flex-row w-full justify-end'>
+        <div className={styles.buttonContainer}>
+          <SettingButton />
+          <RulesButton />
+        </div>
+      </div>
         <div className='iscrizionegiocatori'>
           <div className='iscrizionegiocatoriscritta'>
-            {/* Contenuto del div 'iscrizionegiocatoriscritta' 
-            style={{ background: backgroundPlayerImages[index] }}*/}
           </div>
         </div>
         {players.map((str, index) => (

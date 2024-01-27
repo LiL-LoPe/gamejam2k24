@@ -4,7 +4,7 @@ import styles from '../styles/Rules.module.css'; // Assicurati che il percorso s
 const RulesButton = () => {
     return (
         <Link href="/rules" passHref>
-            <button className={styles.rulesButton}>Regolamento</button>
+            <button className={styles.rulesButton}></button>
         </Link>
     );
 };
