@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-input{
-    border-width: 1px;
-    border-color: black;
-}
+
 
   

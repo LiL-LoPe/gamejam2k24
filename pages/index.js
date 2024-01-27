@@ -36,7 +36,7 @@ export default function Home() {
     } else {
       setValidationError(false);
       // Naviga alla pagina successiva programmatticamente
-      window.location.href = '/rules';
+      window.location.href = '/intro';
     }
   };
 
@@ -58,12 +58,13 @@ export default function Home() {
       <div className='boxStyle'>
         <div className='iscrizionegiocatori'>
           <div className='iscrizionegiocatoriscritta'>
-            {/* Contenuto del div 'iscrizionegiocatoriscritta' */}
+            {/* Contenuto del div 'iscrizionegiocatoriscritta' 
+            style={{ background: backgroundPlayerImages[index] }}*/}
           </div>
         </div>
         {players.map((str, index) => (
           //gestisce lo sfondo del text
-          <div key={index} className="playerBox" style={{ background: backgroundPlayerImages[index]}}>
+          <div key={index} className="playerBox bg-no-repeat" > 
             {/* codice per la penna  */}
             <div className = 'penImage'style={{
                 background: backgroundPenImages[index],
@@ -77,9 +78,11 @@ export default function Home() {
                 type="text"
                 value={str}
                 onChange={(event) => handleInputChange(index, event)}
-                className={`w-full ${validationError ? 'error' : ''}`}
+                className={` w-full ${validationError ? 'error' : ''}`}
                 style={{
                   background: 'transparent',
+                  backgroundImage: backgroundPlayerImages[index],
+                  backgroundSize: "cover",
                   border: 'transparent',
                   borderBottom: '1px solid #ccc',
                   borderRadius: '0',
@@ -168,7 +171,7 @@ export default function Home() {
         };
 
         .playerBox {
-          background-size: cover;
+          background-size: fit;
           background-repeat: no-repeat;
           display: flex;
           flex-direction: column;
