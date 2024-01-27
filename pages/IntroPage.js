@@ -8,7 +8,7 @@ const IntroPage = () => {
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
         <Image
-          src=url("../public/Images/5C_Rosettaaggiustalacorona.png") // Assicurati che il percorso sia corretto. In Next.js, i percorsi delle immagini iniziano dalla cartella 'public'
+          src="../public/Images/5C_Rosettaaggiustalacorona.png" // Assicurati che il percorso sia corretto. In Next.js, i percorsi delle immagini iniziano dalla cartella 'public'
           alt="Descrizione dell'immagine"
           layout="fill"
           objectFit="contain"

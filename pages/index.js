@@ -5,6 +5,7 @@ import rulesStyles from '../styles/Rules.module.css';
 import settingButtonStyles from '../styles/SettingButton.module.css';
 import SettingButton from './SettingButton';
 import RulesButton from './RulesButton';
+import styles from '../styles/Rules.module.css';
 
 
 const backgroundPlayerImages = [
@@ -42,8 +43,13 @@ export default function Home() {
       setValidationError(true);
     } else {
       setValidationError(false);
+<<<<<<< HEAD
       // Naviga alla pagina successiva programmatticamente
       window.location.href = '/IntroPage';
+=======
+
+      window.location.href = '/introPage';
+>>>>>>> 72f53685660198b325fd6044e399f1210b0250a4
     }
   };
 
@@ -62,19 +68,21 @@ export default function Home() {
 
   return (
     <main className="text-5xl flex items-center justify-center w-screen h-screen">
-      <SettingButton />   {/* aggiunti bottoni impostazioni e regolamento */}
-            <RulesButton   />
-            <div className={rulesStyles.rulesButton}></div>
-            <div className={settingButtonStyles.SettingButton}></div>
+      
       <div className='boxStyle'>
+      <div className='flex flex-row w-full justify-end'>
+        <div className={styles.buttonContainer}>
+          <SettingButton />
+          <RulesButton />
+        </div>
+      </div>
         <div className='iscrizionegiocatori'>
           <div className='iscrizionegiocatoriscritta'>
-            {/* Contenuto del div 'iscrizionegiocatoriscritta' */}
           </div>
         </div>
         {players.map((str, index) => (
           //gestisce lo sfondo del text
-          <div key={index} className="playerBox" style={{ background: backgroundPlayerImages[index]}}>
+          <div key={index} className="playerBox bg-no-repeat" > 
             {/* codice per la penna  */}
             <div className = 'penImage'style={{
                 background: backgroundPenImages[index],
@@ -88,9 +96,11 @@ export default function Home() {
                 type="text"
                 value={str}
                 onChange={(event) => handleInputChange(index, event)}
-                className={`w-full ${validationError ? 'error' : ''}`}
+                className={` w-full ${validationError ? 'error' : ''}`}
                 style={{
                   background: 'transparent',
+                  backgroundImage: backgroundPlayerImages[index],
+                  backgroundSize: "cover",
                   border: 'transparent',
                   borderBottom: '1px solid #ccc',
                   borderRadius: '0',
@@ -179,7 +189,7 @@ export default function Home() {
         };
 
         .playerBox {
-          background-size: cover;
+          background-size: fit;
           background-repeat: no-repeat;
           display: flex;
           flex-direction: column;

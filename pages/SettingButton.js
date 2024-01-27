@@ -11,9 +11,7 @@ function SettingButton() {
 
     return (
         <>
-            <button className={styles.settingButton} onClick={() => setShowSettings(!showSettings)}>
-                Impostazioni
-            </button>
+            <button className={styles.settingButton} onClick={() => setShowSettings(!showSettings)}></button>
 
             {showSettings && (
                 <div className={styles.settingsPanel}>

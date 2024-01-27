@@ -1,17 +1,11 @@
 .settingButton {
-    position: absolute;
-    top: 20px; /* Distanza dal bordo superiore */
-    right: 570px; /* Distanza dal bordo destro */
-    z-index: 2; /* Assicura che il pulsante sia sopra gli altri elementi */
-    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
-    background-color: #007bff; /* Colore di sfondo */
-    color: white; /* Colore del testo */
-    border: none; /* Nessun bordo */
-    padding: 30px 5px; /* Imbottitura intorno al testo */
-    border-radius: 5px; /* Angoli arrotondati */
-    opacity: 1;
-    width: 100px;  /* Larghezza fissa */
-    height: 50px;  /* Altezza fissa */
+    background-image: url('../public/selectplayericons/IMPOSTAZIONI.svg');
+    background-size: cover; /* o il valore che preferisci */
+    background-position: center;
+    width: 80px;
+    height: 50px;
+    z-index: 100; 
+    cursor: pointer;
 }
 
 .settingsPanel {
