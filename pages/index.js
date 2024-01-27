@@ -43,7 +43,7 @@ export default function Home() {
     } else {
       setValidationError(false);
       // Naviga alla pagina successiva programmatticamente
-      window.location.href = '/rules';
+      window.location.href = '/IntroPage';
     }
   };
 

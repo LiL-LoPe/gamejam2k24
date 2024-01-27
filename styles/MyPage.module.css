@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+  }
+  
+  .imageWrapper {
+    height: 70vh;
+    width: 50vw;
+    position: relative;
+  }
+  
+  .textBlock {
+    position: absolute;
+    text-align: center;
+    margin: 10px;
+    flex-grow: 0;
+  }
+  
+  .button {
+    align-self: center;
+    margin-bottom: 20px;
+    background-image: url("/grafiche/Export/04-RichiamoGiocatori/RG-Sfoglia.svg"); /* Assicurati che il percorso sia corretto */
+    /* Altre proprietà del pulsante se necessario */
+  }
+  

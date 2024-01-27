@@ -21,7 +21,6 @@
 
 .nextButton {
     position: absolute;
-    bottom: -245px; /* Posiziona il bottone in basso */
     left: 50%;
     transform: translateX(-50%);
     padding: 20px 100px;
@@ -31,7 +30,7 @@
     text-decoration: none;
     border-radius: 5px;
     z-index: 2; /* Metti il bottone in primo piano */
-    opacity: 0; /* Rendi visibile il bottone */
+    opacity: 1; /* Rendi visibile il bottone */
 }
 
 @media (max-width: 600px) {
@@ -49,7 +48,6 @@
     background-color: #007bff; /* Colore di sfondo */
     color: white; /* Colore del testo */
     border: none; /* Nessun bordo */
-    padding: 30px 5px; /* Imbottitura intorno al testo */
     border-radius: 5px; /* Angoli arrotondati */
     opacity: 1;
     width: 75px;  /* Larghezza fissa */
