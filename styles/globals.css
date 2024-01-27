@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+.settingButton {
+    position: absolute;
+    top: 20px; /* Distanza dal bordo superiore */
+    right: 560px; /* Distanza dal bordo destro */
+    z-index: 2; /* Assicura che il pulsante sia sopra gli altri elementi */
+    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+    background-color: #007bff; /* Colore di sfondo */
+    color: white; /* Colore del testo */
+    border: none; /* Nessun bordo */
+    padding: 20px 10px; /* Imbottitura intorno al testo */
+    border-radius: 5px; /* Angoli arrotondati */
+    opacity: 1;
+}
+
+.rulesButton{
+    position: absolute;
+    top: 20px; /* Distanza dal bordo superiore */
+    right: 500px; /* Distanza dal bordo destro */
+    z-index: 100; /* Assicura che il pulsante sia sopra gli altri elementi */
+    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+    background-color: #007bff; /* Colore di sfondo */
+    color: white; /* Colore del testo */
+    border: none; /* Nessun bordo */
+    padding: 20px 10px; /* Imbottitura intorno al testo */
+    border-radius: 5px; /* Angoli arrotondati */
+    opacity: 1;
+}
 
 
   

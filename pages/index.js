@@ -1,6 +1,11 @@
 import { useAppContext } from '@/contexts/AppContext';
 import { useState, useEffect } from 'react';
 import { Howl } from 'howler';
+import rulesStyles from '../styles/Rules.module.css';
+import settingButtonStyles from '../styles/SettingButton.module.css';
+import SettingButton from './SettingButton';
+import RulesButton from './RulesButton';
+
 
 const backgroundPlayerImages = [
   'url("/selectplayericons/IG_Player-1-BG.svg")',
@@ -19,6 +24,8 @@ const backgroundPenImages = [
   'url("/selectplayericons/IG_Player-5-Pen.svg")',
   'url("/selectplayericons/IG_Player-6-Pen.svg")',
 ];
+
+
 
 export default function Home() {
   const { players, updateString, addPlayer, removePlayer } = useAppContext();
@@ -55,6 +62,10 @@ export default function Home() {
 
   return (
     <main className="text-5xl flex items-center justify-center w-screen h-screen">
+      <SettingButton />   {/* aggiunti bottoni impostazioni e regolamento */}
+            <RulesButton   />
+            <div className={rulesStyles.rulesButton}></div>
+            <div className={settingButtonStyles.SettingButton}></div>
       <div className='boxStyle'>
         <div className='iscrizionegiocatori'>
           <div className='iscrizionegiocatoriscritta'>
