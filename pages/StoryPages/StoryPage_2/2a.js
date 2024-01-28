@@ -35,8 +35,9 @@ export default function Intro() {
                     alambicco dentro il calderone.
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/2e', query: {step : 1}}}> </Link>   </div>
-                
+                <Link href="./2b" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`

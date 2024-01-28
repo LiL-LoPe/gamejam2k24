@@ -36,8 +36,9 @@ export default function Intro() {
                     schizzando tutte le pareti di essenza di fagioli purissima.
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/4f', query: {step : 1}}}> </Link>   </div>
-                
+                <Link href="../StoryPage_5/5a" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`

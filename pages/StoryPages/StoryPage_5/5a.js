@@ -8,7 +8,7 @@ export default function Intro() {
 
     useEffect(() => {
         const sound = new Howl({
-          src: ['/musiche/Shape-Book-04.wav'],
+          src: ['/musiche/Shape-Book-05.wav'],
           autoplay: true,
           loop: true,
           volume: 1.0,
@@ -30,14 +30,15 @@ export default function Intro() {
                 </div>
                 <div className='imageStyle'></div>
                 <p className='textStyle'>
-                Per il frastuono provocato dai mille specchi distrutti, 
-                il gatto Boffio e la Dama Bofonia saltano giù dalla finestra.
+                Nonostante gli immensi disastri, il pasticcione Almiro è fiero di esser 
+                riuscito a prepare la miglior torta di fagioli del reame.
                     <br/>
-                    Precipitano proprio su Ramina che è appena riuscita a risalire in groppa a Tombolone.
+                    I servitori che dovranno pulire il pastrocchio non sono però altrettanto contenti.
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/4f', query: {step : 1}}}> </Link>   </div>
-                
+                <Link href="./5b" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`
@@ -62,7 +63,7 @@ export default function Intro() {
         }
 
         .imageStyle {
-            background-image: url('../../../illustrazioni/4_B.png');
+            background-image: url('../../../illustrazioni/5_A.png');
             background-size: contain;
             background-repeat: no-repeat;
             width: 80%;

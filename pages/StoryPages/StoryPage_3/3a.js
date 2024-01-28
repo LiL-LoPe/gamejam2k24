@@ -34,7 +34,9 @@ export default function Intro() {
                     <br/>
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/3b', query: {step : 1}}}> </Link>   </div>
+                <Link href="./3b" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
                 
             </div>
             

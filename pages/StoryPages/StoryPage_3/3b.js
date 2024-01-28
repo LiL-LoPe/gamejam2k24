@@ -35,8 +35,9 @@ export default function Intro() {
                     <br/>
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '../StoryPage_4/4a', query: {step : 1}}}> </Link>   </div>
-                
+                <Link href="../StoryPage_4/4a" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`

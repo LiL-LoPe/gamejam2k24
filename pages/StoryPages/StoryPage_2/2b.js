@@ -36,8 +36,9 @@ export default function Intro() {
                     ne aveva approfittato per farsi una galoppata.
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/3a', query: {step : 1}}}> </Link>   </div>
-                
+                <Link href="../StoryPage_3/3a" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`
