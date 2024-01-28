@@ -17,6 +17,20 @@ export default function Intro() {
           sound.unload();
         };
       }, []);
+    
+      useEffect(() => {
+        const sound = new Howl({
+          src: ['/musiche/Shape-Book-ALL.wav'],
+          autoplay: true,
+          loop: true,
+          volume: 1.0,
+        });
+    
+        return () => {
+          sound.unload();
+        };
+      }, []);
+
 
     return (
         <main className='text-5xl flex flex-col items-center justify-center w-screen h-screen'>
@@ -68,7 +82,7 @@ export default function Intro() {
           
 
         .sfogliaStyle {
-            background-image: url('../../../complete/05-Immagine-Pulsanti/IP-Sfoglia.svg');
+            background-image: url('../../../complete/07-Slider-Recap/SR-Ricomincia.svg');
             background-size: contain;
             background-repeat: no-repeat;
             display: block;

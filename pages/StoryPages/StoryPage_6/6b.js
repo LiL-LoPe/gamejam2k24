@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import SettingButton from '../../SettingButton';
 import RulesButton from '../../RulesButton';
 import { useEffect } from 'react';
 import { Howl } from 'howler';
@@ -7,24 +6,38 @@ import { Howl } from 'howler';
 export default function Intro() {
 
     useEffect(() => {
-        const sound = new Howl({
+        // Primo file audio
+        const sound1 = new Howl({
           src: ['/musiche/Shape-Book-06.wav'],
           autoplay: true,
           loop: true,
-          volume: 1.0,
+          volume: 0.5,
         });
     
+        // Secondo file audio
+        const sound2 = new Howl({
+          src: ['/rend/6_FINALE.wav'],
+          autoplay: false, // Puoi scegliere di non farlo partire automaticamente
+          loop: true,
+          volume: 0.5,
+        });
+    
+        // Riproduci il secondo suono se necessario
+        // sound2.play();
+    
         return () => {
-          sound.unload();
+          // Scarica entrambi i suoni quando il componente viene smontato
+          sound1.unload();
+          sound2.unload();
         };
       }, []);
+    
 
     return (
         <main className='text-5xl flex flex-col items-center justify-center w-screen h-screen'>
             <div className="boxStyle top-60">
             <div className='flex flex-row w-full justify-end'>
                 <div className="buttonContainer">
-                    <SettingButton />
                     <RulesButton />
                 </div>
                 </div>
@@ -33,7 +46,7 @@ export default function Intro() {
                 Da oggi tutti dovranno indossare le mutande con i cagnolini!                    <br/>
                     <br/>
                 </p>
-                <Link href="./6b" passHref>
+                <Link href="../StoryPage_7/7a" passHref>
             <button className='sfogliaStyle'></button>
         </Link> 
             </div>
