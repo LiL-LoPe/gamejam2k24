@@ -44,7 +44,7 @@ export default function Home() {
     } else {
       setValidationError(false);
       // Naviga alla pagina successiva programmatticamente
-      window.location.href = './IntroPage';
+      window.location.href = './storypage/2a';
     }
   };
 
