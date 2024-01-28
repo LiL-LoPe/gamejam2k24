@@ -6,28 +6,29 @@ import { Howl } from 'howler';
 export default function Intro() {
 
     useEffect(() => {
-        const sound = new Howl({
-          src: ['/rend/dub 01 completa.wav'],
-          autoplay: true,
-          loop: true,
-          volume: 1.0,
-        });
-    
-        return () => {
-          sound.unload();
-        };
-      }, []);
-    
-      useEffect(() => {
-        const sound = new Howl({
+        // Primo file audio
+        const sound1 = new Howl({
           src: ['/musiche/Shape-Book-ALL.wav'],
           autoplay: true,
           loop: true,
-          volume: 1.0,
+          volume: 0.5,
         });
     
+        // Secondo file audio
+        const sound2 = new Howl({
+          src: ['/rend/dub-01-completa.wav'],
+          autoplay: true, // Puoi scegliere di non farlo partire automaticamente
+          loop: true,
+          volume: 1,
+        });
+    
+        // Riproduci il secondo suono se necessario
+        // sound2.play();
+    
         return () => {
-          sound.unload();
+          // Scarica entrambi i suoni quando il componente viene smontato
+          sound1.unload();
+          sound2.unload();
         };
       }, []);
 
@@ -42,7 +43,7 @@ export default function Intro() {
                 </div>
                 <div className='imageStyle'></div>
 
-                <Link href="../index.js" passHref>
+                <Link href="../StoryPage_1/1a" passHref>
             <button className='sfogliaStyle'></button>
         </Link> 
             </div>
@@ -69,7 +70,7 @@ export default function Intro() {
         }
 
         .imageStyle {
-            background-image: url('../../../illustrazioni/1_a.png');
+            background-image: url('../../../illustrazioni/5f.png');
             background-size: contain;
             background-repeat: no-repeat;
             width: 80%;
