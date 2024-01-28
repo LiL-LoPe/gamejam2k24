@@ -36,8 +36,9 @@ export default function Intro() {
                     Precipitano proprio su Ramina che è appena riuscita a risalire in groppa a Tombolone.
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/4f', query: {step : 1}}}> </Link>   </div>
-                
+                <Link href="./4c" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`

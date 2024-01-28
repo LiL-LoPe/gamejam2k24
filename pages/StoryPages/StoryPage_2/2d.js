@@ -35,8 +35,9 @@ export default function Intro() {
                     ma durante la lotta colpisce per errore la magica corona del regno.
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/3a', query: {step : 1}}}> </Link>   </div>
-                
+                <Link href="./2e" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`

@@ -36,7 +36,7 @@ export default function Intro() {
                     schizzando tutte le pareti di essenza di fagioli purissima.
                     <br/>
                 </p>
-                <Link href="../StoryPage_5/5a" passHref>
+                <Link href="./4b" passHref>
             <button className='sfogliaStyle'></button>
         </Link> 
             </div>

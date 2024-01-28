@@ -35,8 +35,9 @@ export default function Intro() {
                     titolo di "Principe Venticello" e fama imperitura.
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/3a', query: {step : 1}}}> </Link>   </div>
-                
+                <Link href="./2d" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`

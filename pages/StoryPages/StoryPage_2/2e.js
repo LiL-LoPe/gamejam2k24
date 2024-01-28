@@ -36,8 +36,9 @@ export default function Intro() {
                     si specchia a fianco della sua padrona, cimentandosi in bizzarre pose dinamiche.
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/3a', query: {step : 1}}}> </Link>   </div>
-                
+                <Link href="./2f" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`

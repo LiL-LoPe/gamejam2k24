@@ -33,9 +33,10 @@ export default function Intro() {
                 Nella sala degli strumenti del castello, Ditirello il menestrello prova una ballata.
                     <br/>Ad udire la sua voce sgraziata, il mandolino si rifiuta di suonare.
                     <br/>
-                </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/3a', query: {step : 1}}}> </Link>   </div>
-                
+                </p> 
+                <Link href="../StoryPage_3/3a" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`

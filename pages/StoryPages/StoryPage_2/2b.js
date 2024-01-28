@@ -36,7 +36,7 @@ export default function Intro() {
                     ne aveva approfittato per farsi una galoppata.
                     <br/>
                 </p>
-                <Link href="../StoryPage_3/3a" passHref>
+                <Link href="./2c" passHref>
             <button className='sfogliaStyle'></button>
         </Link> 
             </div>

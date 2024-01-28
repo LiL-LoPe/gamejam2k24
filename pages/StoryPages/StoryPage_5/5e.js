@@ -30,14 +30,13 @@ export default function Intro() {
                 </div>
                 <div className='imageStyle'></div>
                 <p className='textStyle'>
-                Nonostante gli immensi disastri, il pasticcione Almiro è fiero di esser 
-                riuscito a prepare la miglior torta di fagioli del reame.
+                Dama Bofonia è rientrata nelle sue stanze e si dedica alla sua attività preferita: truccare il suo gatto.
                     <br/>
-                    I servitori che dovranno pulire il pastrocchio non sono però altrettanto contenti.
-                    <br/>
+                    Nel paraglia però, le si sono rotti gli occhiali.
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/5b', query: {step : 1}}}> </Link>   </div>
-                
+                <Link href="./5f" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`

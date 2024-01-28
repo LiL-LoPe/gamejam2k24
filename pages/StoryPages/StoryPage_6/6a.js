@@ -8,7 +8,7 @@ export default function Intro() {
 
     useEffect(() => {
         const sound = new Howl({
-          src: ['/musiche/Shape-Book-05.wav'],
+          src: ['/musiche/Shape-Book-06.wav'],
           autoplay: true,
           loop: true,
           volume: 1.0,
@@ -30,12 +30,11 @@ export default function Intro() {
                 </div>
                 <div className='imageStyle'></div>
                 <p className='textStyle'>
-                A causa dell'esplosione i vestiti di Ditirello si sono strappati ed impolverati.
+                La regina emana un decreto reale! da oggi tutti dovranno indossare le mutande con i cagnolini!
                     <br/>
-                    Tuttavia i suoi fan sembrano apprezzare questa novità.
                     <br/>
                 </p>
-                <Link href="../StoryPage_6/6a" passHref>
+                <Link href="./6b" passHref>
             <button className='sfogliaStyle'></button>
         </Link> 
             </div>
@@ -62,7 +61,7 @@ export default function Intro() {
         }
 
         .imageStyle {
-            background-image: url('../../../illustrazioni/5_F.png');
+            background-image: url('../../../illustrazioni/6_finale_A.png');
             background-size: contain;
             background-repeat: no-repeat;
             width: 80%;

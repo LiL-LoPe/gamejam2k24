@@ -8,7 +8,7 @@ export default function Intro() {
 
     useEffect(() => {
         const sound = new Howl({
-          src: ['/musiche/Shape-Book-05.wav'],
+          src: ['/musiche/Shape-Book-01.wav'],
           autoplay: true,
           loop: true,
           volume: 1.0,
@@ -30,14 +30,13 @@ export default function Intro() {
                 </div>
                 <div className='imageStyle'></div>
                 <p className='textStyle'>
-                A causa dell'esplosione i vestiti di Ditirello si sono strappati ed impolverati.
+                C'era una volta, in un regno ricco di fiumi e verde di boschi, un grande castello di Zucchero e Glassa.
                     <br/>
-                    Tuttavia i suoi fan sembrano apprezzare questa novità.
                     <br/>
                 </p>
-                <Link href="../StoryPage_6/6a" passHref>
+                <Link href="./1b" passHref>
             <button className='sfogliaStyle'></button>
-        </Link> 
+        </Link>
             </div>
             
         <style jsx>{`
@@ -62,7 +61,7 @@ export default function Intro() {
         }
 
         .imageStyle {
-            background-image: url('../../../illustrazioni/5_F.png');
+            background-image: url('../../../illustrazioni/1_Intro_A.jpg');
             background-size: contain;
             background-repeat: no-repeat;
             width: 80%;

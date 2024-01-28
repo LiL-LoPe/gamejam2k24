@@ -30,14 +30,14 @@ export default function Intro() {
                 </div>
                 <div className='imageStyle'></div>
                 <p className='textStyle'>
-                Nonostante gli immensi disastri, il pasticcione Almiro è fiero di esser 
-                riuscito a prepare la miglior torta di fagioli del reame.
+                Grazie all'essenza di fagioli purissima Ser Lancitonto vince la competizione "Duello di Puzzette",
                     <br/>
-                    I servitori che dovranno pulire il pastrocchio non sono però altrettanto contenti.
+                    ma prima che venga incoronato "Principe Venticello", tutti i giudici della gara svengono dalla puzza.
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/5b', query: {step : 1}}}> </Link>   </div>
-                
+                <Link href="./5d" passHref>
+            <button className='sfogliaStyle'></button>
+        </Link> 
             </div>
             
         <style jsx>{`

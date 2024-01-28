@@ -37,7 +37,7 @@ export default function Intro() {
                 </p>
                 <Link href="./2b" passHref>
             <button className='sfogliaStyle'></button>
-        </Link> 
+        </Link>
             </div>
             
         <style jsx>{`

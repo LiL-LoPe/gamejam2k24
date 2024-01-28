@@ -42,7 +42,7 @@ export default function Home() {
     } else {
       setValidationError(false);
       // Naviga alla pagina successiva programmatticamente
-      window.location.href = './StoryPages/StoryPage_2/2a';
+      window.location.href = './StoryPages/StoryPage_1/1a';
     }
   };
 

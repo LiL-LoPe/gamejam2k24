@@ -30,13 +30,12 @@ export default function Intro() {
                 </div>
                 <div className='imageStyle'></div>
                 <p className='textStyle'>
-                Nonostante gli immensi disastri, il pasticcione Almiro è fiero di esser 
-                riuscito a prepare la miglior torta di fagioli del reame.
+                Stufa di correre dietro a Tombolone, Ramina decide di lasciare il suo lavoro.
                     <br/>
-                    I servitori che dovranno pulire il pastrocchio non sono però altrettanto contenti.
+                    Invece di continuare a fare la garzona diventa l'apprendista di Boffio.
                     <br/>
                 </p>
-                <Link href="../StoryPage_6/6a" passHref>
+                <Link href="./5c" passHref>
             <button className='sfogliaStyle'></button>
         </Link> 
             </div>
