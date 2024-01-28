@@ -1,14 +1,14 @@
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centra i figli lungo l'asse trasversale (orizzontale) */
+    justify-content: center; /* Centra i figli lungo l'asse principale (verticale) */
     height: 100vh;
-    justify-content: space-between;
   }
   
   .imageWrapper {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
+    width: 100%; /* Larghezza completa dello schermo */
+    height: 50vh; /* Metà dell'altezza dello schermo */
   }
   
   .textBlock {
@@ -21,7 +21,7 @@
   .button {
     align-self: center;
     margin-bottom: 20px;
-    background-image: url("/grafiche/Export/04-RichiamoGiocatori/RG-Sfoglia.svg"); /* Assicurati che il percorso sia corretto */
+    background-image: "/public/grafiche/Export/04-RichiamoGiocatori/RG-Sfoglia.svg"; /* Assicurati che il percorso sia corretto */
     /* Altre proprietà del pulsante se necessario */
   }
   

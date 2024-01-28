@@ -10,8 +10,10 @@ const IntroPage = () => {
         <Image
           src="/Images/5C_Rosettaaggiustalacorona.png" // Assicurati che il percorso sia corretto. In Next.js, i percorsi delle immagini iniziano dalla cartella 'public'
           alt="Descrizione dell'immagine"
-          layout="fill"
+          layout="responsive"
           objectFit="contain"
+          width={100}  // Questi valori sono puramente simbolici
+          height={50}  // per mantenere il rapporto 2:1 (larghezza:altezza)
         />
       </div >
       <div className={styles.textBlock}>
@@ -22,7 +24,7 @@ const IntroPage = () => {
         </p>
       </div>
       <Link href="/prossimaPagina">
-      className={styles.button}
+        className={styles.button}
       </Link>
     </div>
   );
