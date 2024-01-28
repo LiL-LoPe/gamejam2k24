@@ -63,86 +63,66 @@ export default function Home() {
 
   return (
     <main className="text-5xl flex items-center justify-center w-screen h-screen">
-      
       <div className='boxStyle'>
-      <div className='flex flex-row w-full justify-end'>
-        <div className={styles.buttonContainer}>
-          <SettingButton />
-          <RulesButton />
+        <div className='flex flex-row w-full justify-end'>
+          <div className={styles.buttonContainer}>
+            <SettingButton />
+            <RulesButton />
+          </div>
         </div>
-      </div>
         <div className='iscrizionegiocatori'>
-          <div className='iscrizionegiocatoriscritta'>
-          </div>
+          {/* Rimuovi il background-image e fai scroll se necessario */}
         </div>
-        {players.map((str, index) => (
-          //gestisce lo sfondo del text
-          <div key={index} className="playerBox bg-no-repeat" > 
-            {/* codice per la penna  */}
-            <div className = 'penImage'style={{
-                background: backgroundPenImages[index],
-              }}>
+        <div className='players-container'>
+          {players.map((str, index) => (
+            <div key={index} className="playerBox bg-no-repeat">
+              <div className='penImage' style={{ background: backgroundPenImages[index] }}></div>
+              <label>
+                <input
+                  type="text"
+                  value={str}
+                  onChange={(event) => handleInputChange(index, event)}
+                  className={`w-full ${validationError ? 'error' : ''}`}
+                  style={{
+                    background: 'transparent',
+                    backgroundImage: backgroundPlayerImages[index],
+                    backgroundSize: "cover",
+                    border: 'transparent',
+                    borderBottom: '1px solid #ccc',
+                    borderRadius: '0',
+                    padding: '5px',
+                    marginTop: '5px',
+                    paddingLeft: '50px',
+                  }}
+                />
+              </label>
             </div>
-            <label
-            />
-            <label style={{ width: '100%', marginBottom: '5px' }}>
-              {/* definisce inputbox */}
-              <input
-                type="text"
-                value={str}
-                onChange={(event) => handleInputChange(index, event)}
-                className={` w-full ${validationError ? 'error' : ''}`}
-                style={{
-                  background: 'transparent',
-                  backgroundImage: backgroundPlayerImages[index],
-                  backgroundSize: "cover",
-                  border: 'transparent',
-                  borderBottom: '1px solid #ccc',
-                  borderRadius: '0',
-                  padding: '5px',
-                  marginTop: '5px',
-                  paddingLeft: '50px', // Aggiunto padding per far spazio all'immagine della penna
-                }}
-              />
-            </label>
-          </div>
-        ))}
+          ))}
+        </div>
         {validationError && <p style={{ fontSize: '0.65em' }} className={`text-red-500 ${validationError ? 'error-message' : ''}`}>Almeno tre giocatori devono essere inseriti.</p>}
-        <button onClick={addPlayer}>+</button>
-        <button onClick={removePlayer}>-</button>
-        <button className='play-button' onClick={playButtonHandler}>
-          <div className='play-button-text'>
-            {/* Contenuto del div 'iscrizionegiocatoriscritta' */}
-          </div>
-        </button>
+        <div className='addorremovepg'>
+          <button onClick={addPlayer}>+</button>
+          <button onClick={removePlayer}>-</button>
+        </div>
+        <button className='play-button' onClick={playButtonHandler}></button>
       </div>
       <style jsx>{`
         .iscrizionegiocatori {
-          background-image: url('selectplayericons/IG-Title-BG.svg');
+          background-image: url('complete/02-Iscrizione-Giocatori/IG-Title-ACCO.svg');
           background-repeat: no-repeat;
           display: flex;
           justify-content: center;
           align-items: center;
           height: 13vh;
-          width: 33vw;
-        }
-
-        .iscrizionegiocatoriscritta {
-          background-image: url('selectplayericons/IG-Title-Text.svg');
-          background-repeat: no-repeat;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 10vh;
-          width: 30vw;
+          width: 50vw;
         }
 
         .play-button {
-          background-image: url('selectplayericons/IG-Continua-Sfondo.svg');
+          background-image: url('complete/02-Iscrizione-Giocatori/IG-Continua-ACCO.svg');
           background-size: cover;
           background-repeat: no-repeat;
-          height: 13vh;
-          width: 33vw;
+          height: 16vh;
+          width: 83vw;
           border: none;
           cursor: pointer;
           margin-top: 10px;
@@ -151,25 +131,7 @@ export default function Home() {
           display: flex;
           align-items: center;
           justify-content: center;
-          color: white;
-          font-size: 18px;
-        }
 
-        .play-button-text {
-          z-index: 1;
-          background-image: url('selectplayericons/IG-Continua-Text.svg');
-          background-size: cover;
-          background-repeat: no-repeat;
-          height: 4vh;
-          width: 11vw;
-          border: none;
-          cursor: pointer;
-          margin-top: 10px;
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
 
         .boxStyle  {
@@ -199,6 +161,10 @@ export default function Home() {
           width: 5vw;
           height: 10vh;
           position: absolute;
+        }
+
+        .addorremovepg  {
+          
         }
       `}</style>
     </main>

@@ -35,7 +35,7 @@ export default function Intro() {
                     alambicco dentro il calderone.
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/3a', query: {step : 1}}}> </Link>   </div>
+                <div className='sfogliaStyle' > <Link href={{ pathname: '../selectpg', query: {step : 1}}}> </Link>   </div>
                 
             </div>
             
