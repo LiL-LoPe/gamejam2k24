@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import SettingButton from '../SettingButton';
-import RulesButton from '../RulesButton';
+import SettingButton from '../../SettingButton';
+import RulesButton from '../../RulesButton';
 import { useEffect } from 'react';
 import { Howl } from 'howler';
 
@@ -8,7 +8,7 @@ export default function Intro() {
 
     useEffect(() => {
         const sound = new Howl({
-          src: ['/musiche/Shape-Book-02.wav'],
+          src: ['/musiche/Shape-Book-03.wav'],
           autoplay: true,
           loop: true,
           volume: 1.0,
@@ -30,19 +30,18 @@ export default function Intro() {
                 </div>
                 <div className='imageStyle'></div>
                 <p className='textStyle'>
-                Nella sala degli specchi del castello, la vanitosa Dama Bofonia 
-                si pavoneggia davanti al suo gigantesco riflesso.
-                    <br/>Nel frattempo, Boffio, l'altezzoso gato della Dama, 
-                    si specchia a fianco della sua padrona, cimentandosi in bizzarre pose dinamiche.
+                    Presa alla sprovvista, la Regina rotola giù dal trono e si arrabbia quando tutti i nobili 
+                    scoppiano a ridere nel vedere le sue mutande con dei cagnolini.
+                    <br/>
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/3a', query: {step : 1}}}> </Link>   </div>
+                <div className='sfogliaStyle' > <Link href={{ pathname: '../StoryPage_4/4a', query: {step : 1}}}> </Link>   </div>
                 
             </div>
             
         <style jsx>{`
         .boxStyle  {
-            background-image: url('../complete/05-Immagine-Pulsanti/IP-ACCO.svg');
+            background-image: url('../../../complete/05-Immagine-Pulsanti/IP-ACCO.svg');
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;
@@ -62,7 +61,7 @@ export default function Intro() {
         }
 
         .imageStyle {
-            background-image: url('../illustrazioni/2_E_double.png');
+            background-image: url('../../../illustrazioni/3_raccordo_B.png');
             background-size: contain;
             background-repeat: no-repeat;
             width: 80%;
@@ -75,7 +74,7 @@ export default function Intro() {
           
 
         .sfogliaStyle {
-            background-image: url('../complete/05-Immagine-Pulsanti/IP-Sfoglia.svg');
+            background-image: url('../../../complete/05-Immagine-Pulsanti/IP-Sfoglia.svg');
             background-size: contain;
             background-repeat: no-repeat;
             display: block;

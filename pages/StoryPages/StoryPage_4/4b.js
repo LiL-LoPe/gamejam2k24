@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import SettingButton from '../SettingButton';
-import RulesButton from '../RulesButton';
+import SettingButton from '../../SettingButton';
+import RulesButton from '../../RulesButton';
 import { useEffect } from 'react';
 import { Howl } from 'howler';
 
@@ -8,7 +8,7 @@ export default function Intro() {
 
     useEffect(() => {
         const sound = new Howl({
-          src: ['/musiche/Shape-Book-02.wav'],
+          src: ['/musiche/Shape-Book-04.wav'],
           autoplay: true,
           loop: true,
           volume: 1.0,
@@ -30,18 +30,18 @@ export default function Intro() {
                 </div>
                 <div className='imageStyle'></div>
                 <p className='textStyle'>
-                    Nel salone del castello, la Principessa Rosetta si allena di nascosto con la mazza da guerra.
-                    <br/>Immagina di combattere contro un feroce drago albino, 
-                    ma durante la lotta colpisce per errore la magica corona del regno.
+                Per il frastuono provocato dai mille specchi distrutti, 
+                il gatto Boffio e la Dama Bofonia saltano giù dalla finestra.
+                    <br/>Precipitano proprio su Ramina che è appena riuscita a risalire in groppa a Tombolone.
                     <br/>
                 </p>
-                <div className='sfogliaStyle' > <Link href={{ pathname: '/3a', query: {step : 1}}}> </Link>   </div>
+                <div className='sfogliaStyle' > <Link href={{ pathname: '/4f', query: {step : 1}}}> </Link>   </div>
                 
             </div>
             
         <style jsx>{`
         .boxStyle  {
-            background-image: url('../complete/05-Immagine-Pulsanti/IP-ACCO.svg');
+            background-image: url('../../../complete/05-Immagine-Pulsanti/IP-ACCO.svg');
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;
@@ -61,7 +61,7 @@ export default function Intro() {
         }
 
         .imageStyle {
-            background-image: url('../illustrazioni/2_D.png');
+            background-image: url('../../../illustrazioni/4_A.png');
             background-size: contain;
             background-repeat: no-repeat;
             width: 80%;
@@ -74,7 +74,7 @@ export default function Intro() {
           
 
         .sfogliaStyle {
-            background-image: url('../complete/05-Immagine-Pulsanti/IP-Sfoglia.svg');
+            background-image: url('../../../complete/05-Immagine-Pulsanti/IP-Sfoglia.svg');
             background-size: contain;
             background-repeat: no-repeat;
             display: block;

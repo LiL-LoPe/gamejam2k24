@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import SettingButton from '../SettingButton';
-import RulesButton from '../RulesButton';
+import SettingButton from '../../SettingButton';
+import RulesButton from '../../RulesButton';
 import { useEffect } from 'react';
 import { Howl } from 'howler';
 
@@ -30,9 +30,9 @@ export default function Intro() {
                 </div>
                 <div className='imageStyle'></div>
                 <p className='textStyle'>
-                    Nell'arena del castello, Ser Lancitonto si allena a mangiare dei fagioli.
-                    <br/>Vuole vincere il torneo di puzzette per conquistare il 
-                    titolo di "Principe Venticello" e fama imperitura.
+                    Nel salone del castello, la Principessa Rosetta si allena di nascosto con la mazza da guerra.
+                    <br/>Immagina di combattere contro un feroce drago albino, 
+                    ma durante la lotta colpisce per errore la magica corona del regno.
                     <br/>
                 </p>
                 <div className='sfogliaStyle' > <Link href={{ pathname: '/3a', query: {step : 1}}}> </Link>   </div>
@@ -41,7 +41,7 @@ export default function Intro() {
             
         <style jsx>{`
         .boxStyle  {
-            background-image: url('../complete/05-Immagine-Pulsanti/IP-ACCO.svg');
+            background-image: url('../../../complete/05-Immagine-Pulsanti/IP-ACCO.svg');
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;
@@ -61,7 +61,7 @@ export default function Intro() {
         }
 
         .imageStyle {
-            background-image: url('../illustrazioni/2_C.png');
+            background-image: url('../../../illustrazioni/2_D.png');
             background-size: contain;
             background-repeat: no-repeat;
             width: 80%;
@@ -74,7 +74,7 @@ export default function Intro() {
           
 
         .sfogliaStyle {
-            background-image: url('../complete/05-Immagine-Pulsanti/IP-Sfoglia.svg');
+            background-image: url('../../../complete/05-Immagine-Pulsanti/IP-Sfoglia.svg');
             background-size: contain;
             background-repeat: no-repeat;
             display: block;
