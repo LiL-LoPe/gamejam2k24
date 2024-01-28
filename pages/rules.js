@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import styles from '../styles/Rules.module.css';
-import SettingButton from './SettingButton';
 import RulesButton from './RulesButton';
 import BackButton from './BackButton';
 
@@ -8,9 +7,7 @@ import BackButton from './BackButton';
 export default function Rules() {
     return (
         <main className={styles.main}>
-            <SettingButton />
-            <RulesButton   />
-            <div className={styles.rulesButton}></div>
+            <RulesButton  />
             <div className={styles.imageContainer}>
                 <Image 
                     src="/Images/Regolamento.png"

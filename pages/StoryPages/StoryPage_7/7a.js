@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import SettingButton from '../../SettingButton';
 import RulesButton from '../../RulesButton';
 import { useEffect } from 'react';
 import { Howl } from 'howler';
@@ -8,7 +7,7 @@ export default function Intro() {
 
     useEffect(() => {
         const sound = new Howl({
-          src: ['/musiche/Shape-Book-ALL.wav'],
+          src: ['/rend/dub 01 completa.wav'],
           autoplay: true,
           loop: true,
           volume: 1.0,
@@ -24,13 +23,12 @@ export default function Intro() {
             <div className="boxStyle top-60">
             <div className='flex flex-row w-full justify-end'>
                 <div className="buttonContainer">
-                    <SettingButton />
                     <RulesButton />
                 </div>
                 </div>
                 <div className='imageStyle'></div>
 
-                <Link href="./2e" passHref>
+                <Link href="../index.js" passHref>
             <button className='sfogliaStyle'></button>
         </Link> 
             </div>
@@ -57,7 +55,7 @@ export default function Intro() {
         }
 
         .imageStyle {
-            background-image: url('../../../illustrazioni/2_D.png');
+            background-image: url('../../../illustrazioni/1_a.png');
             background-size: contain;
             background-repeat: no-repeat;
             width: 80%;

@@ -15,8 +15,8 @@ export default function SelectPg() {
         <div className='textBox'>
           <p className='textStyle'>
             Select PG: Adesso giocano
-            <span className='text-orange-600'>{" " + players[(parseInt(step) - 1) % players.length] + " "}</span> e
-            <span className='text-orange-600'>{" " + players[(parseInt(step)) % players.length] + " "}</span>
+            <span className='text-black-600'>{" " + players[(parseInt(step) - 1) % players.length] + " "}</span> e
+            <span className='text-black-600'>{" " + players[(parseInt(step)) % players.length] + " "}</span>
           </p>
 
           <p>{query["step"]}</p>

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import SettingButton from '../../SettingButton';
 import RulesButton from '../../RulesButton';
 import { useEffect } from 'react';
 import { Howl } from 'howler';
@@ -24,7 +23,6 @@ export default function Intro() {
             <div className="boxStyle top-60">
             <div className='flex flex-row w-full justify-end'>
                 <div className="buttonContainer">
-                    <SettingButton />
                     <RulesButton />
                 </div>
                 </div>

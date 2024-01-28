@@ -1,6 +1,6 @@
 .main {
-    position: relative;
-    width: 100%;
+    position:absolute;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -21,16 +21,19 @@
 
 .nextButton {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 20px 100px;
+    top: 50%; /* Posizione al centro rispetto all'altezza */
+    left: 50%; /* Posizione al centro rispetto alla larghezza */
+    transform: translate(-50%, 450%); /* Sposta indietro di metà della larghezza e metà dell'altezza */
+    align-items: center;
+    width: 200px;
+    padding: 20px 200px;
     background-color: #007bff;
     cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
     color: white;
     text-decoration: none;
     border-radius: 5px;
     z-index: 2; /* Metti il bottone in primo piano */
-    opacity: 1; /* Rendi visibile il bottone */
+    opacity: 0; /* Rendi visibile il bottone */
 }
 
 @media (max-width: 600px) {
