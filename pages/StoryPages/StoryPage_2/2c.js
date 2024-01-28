@@ -11,7 +11,7 @@ export default function Intro() {
       src: ['/musiche/Shape-Book-02.wav'],
       autoplay: true,
       loop: true,
-      volume: 0.5,
+      volume: 0.2,
     });
 
     // Secondo file audio

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import SettingButton from '../../SettingButton';
 import RulesButton from '../../RulesButton';
 import { useEffect } from 'react';
 import { Howl } from 'howler';
@@ -7,15 +6,29 @@ import { Howl } from 'howler';
 export default function Intro() {
 
     useEffect(() => {
-        const sound = new Howl({
+        // Primo file audio
+        const sound1 = new Howl({
           src: ['/musiche/Shape-Book-04.wav'],
           autoplay: true,
           loop: true,
-          volume: 1.0,
+          volume: 0.2,
         });
     
+        // Secondo file audio
+        const sound2 = new Howl({
+          src: ['/rend/4_A.wav'],
+          autoplay: true, // Puoi scegliere di non farlo partire automaticamente
+          loop: false,
+          volume: 1,
+        });
+    
+        // Riproduci il secondo suono se necessario
+        // sound2.play();
+    
         return () => {
-          sound.unload();
+          // Scarica entrambi i suoni quando il componente viene smontato
+          sound1.unload();
+          sound2.unload();
         };
       }, []);
 
@@ -24,7 +37,6 @@ export default function Intro() {
             <div className="boxStyle top-60">
             <div className='flex flex-row w-full justify-end'>
                 <div className="buttonContainer">
-                    <SettingButton />
                     <RulesButton />
                 </div>
                 </div>

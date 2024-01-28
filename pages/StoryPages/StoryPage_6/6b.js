@@ -11,15 +11,15 @@ export default function Intro() {
           src: ['/musiche/Shape-Book-06.wav'],
           autoplay: true,
           loop: true,
-          volume: 0.5,
+          volume: 0.2,
         });
     
         // Secondo file audio
         const sound2 = new Howl({
           src: ['/rend/6_FINALE.wav'],
-          autoplay: false, // Puoi scegliere di non farlo partire automaticamente
-          loop: true,
-          volume: 0.5,
+          autoplay: true, // Puoi scegliere di non farlo partire automaticamente
+          loop: false,
+          volume: 1,
         });
     
         // Riproduci il secondo suono se necessario

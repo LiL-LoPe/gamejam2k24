@@ -11,12 +11,12 @@ export default function Intro() {
       src: ['/musiche/Shape-Book-02.wav'],
       autoplay: true,
       loop: true,
-      volume: 0.5,
+      volume: 0.2,
     });
 
     // Secondo file audio
     const sound2 = new Howl({
-      src: ['/rend/2_C.wav'],
+      src: ['/rend/2_D.wav'],
       autoplay: true, // Puoi scegliere di non farlo partire automaticamente
       loop: false,
       volume: 1,

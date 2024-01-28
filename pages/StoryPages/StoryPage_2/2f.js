@@ -6,18 +6,32 @@ import { Howl } from 'howler';
 
 export default function Intro() {
 
-    useEffect(() => {
-        const sound = new Howl({
-          src: ['/musiche/Shape-Book-02.wav'],
-          autoplay: true,
-          loop: true,
-          volume: 1.0,
-        });
-    
-        return () => {
-          sound.unload();
-        };
-      }, []);
+  useEffect(() => {
+    // Primo file audio
+    const sound1 = new Howl({
+      src: ['/musiche/Shape-Book-02.wav'],
+      autoplay: true,
+      loop: true,
+      volume: 0.2,
+    });
+
+    // Secondo file audio
+    const sound2 = new Howl({
+      src: ['/rend/2_F.wav'],
+      autoplay: true, // Puoi scegliere di non farlo partire automaticamente
+      loop: false,
+      volume: 1,
+    });
+
+    // Riproduci il secondo suono se necessario
+    // sound2.play();
+
+    return () => {
+      // Scarica entrambi i suoni quando il componente viene smontato
+      sound1.unload();
+      sound2.unload();
+    };
+  }, []);
 
     return (
         <main className='text-5xl flex flex-col items-center justify-center w-screen h-screen'>
