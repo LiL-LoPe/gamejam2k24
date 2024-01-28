@@ -8,7 +8,7 @@ export default function Intro() {
 
     useEffect(() => {
         const sound = new Howl({
-          src: ['/musiche/Shape-Book-01.wav'],
+          src: ['/musiche/Shape-Book-02.wav'],
           autoplay: true,
           loop: true,
           volume: 1.0,
@@ -54,7 +54,10 @@ export default function Intro() {
         .textStyle  {
             text-align: center;
             font-size: 20px; /* Aggiunto 'px' e ridotto il valore del font size */
+            font-family: 'Times New Roman', Times, serif;
             margin-top: -40px; /* Spazio sopra il testo */
+            margin-right: 20px;
+            margin-left: 20px;
         }
 
         .imageStyle {

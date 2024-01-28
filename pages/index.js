@@ -1,8 +1,6 @@
 import { useAppContext } from '@/contexts/AppContext';
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import { Howl } from 'howler';
-import rulesStyles from '../styles/Rules.module.css';
-import settingButtonStyles from '../styles/SettingButton.module.css';
 import SettingButton from './SettingButton';
 import RulesButton from './RulesButton';
 import styles from '../styles/Rules.module.css';
@@ -63,7 +61,7 @@ export default function Home() {
 
   return (
     <main className="text-5xl flex items-center justify-center w-screen h-screen">
-      
+
       <div className='boxStyle'>
       <div className='flex flex-row w-full justify-end'>
         <div className={styles.buttonContainer}>
